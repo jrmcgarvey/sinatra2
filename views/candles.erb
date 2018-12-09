@@ -1,0 +1,21 @@
+<% if @age >120 %>
+<p>That's too old.</p>
+<% else %> 
+<% @age.times do %>
+<img src="https://purepng.com/public/uploads/large/purepng.com-yellow-candlecandleflammabletraditioncandelyellow-142152649073877j5z.png" 
+class="candle" alt="candle" onmouseover="style.visibility='hidden'"></img>
+<% end %>
+<% end %>
+<br><input type="button" value="re-light the candles" onclick="relight()">
+<script>
+//function sleep(ms) {
+//  return new Promise(resolve => setTimeout(resolve, ms));
+//}
+    function relight() {
+        let candles=document.getElementsByTagName("img");
+        let n=candles.length;
+        for (var i=0;i<n;i++) {
+            candles[i].style.visibility = "visible";
+        }
+    }
+</script>

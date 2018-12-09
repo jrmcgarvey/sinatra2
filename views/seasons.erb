@@ -1,0 +1,32 @@
+<% case @month %>
+<% when 12,1,2 %>
+<img id="img" src="http://images.clipartpanda.com/winter-clip-art-winterTree.jpg" alt="winter"
+  onclick="advanceSeason()"></img>
+<% when 3,4,5 %>
+<img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9Ae8OVvt4rlce3cYoS2iYCXwuPyFCFLVpLLQNI152Jse_5s7" alt="spring"
+  onclick="advanceSeason()"></img>
+<% when 6,7,8 %>
+<img id="img" src="https://png.pngtree.com/element_origin_min_pic/17/08/15/3c72545ac439c95ecf2abcaf64ffd3ff.jpg" alt="summer"
+  onclick="advanceSeason()"></img>
+<% else %>
+<img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBoLKJgoYcB5Q9O0ZbN27HIflIGDiTShz1u1vfTUhLXRgkvH0N" alt="fall" 
+  onclick="advanceSeason()"></img>
+<% end %>
+<script>
+function advanceSeason() {
+        let myImg=document.getElementById("img");
+        if (myImg.alt=="winter") {
+            myImg.alt="spring";
+            myImg.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9Ae8OVvt4rlce3cYoS2iYCXwuPyFCFLVpLLQNI152Jse_5s7";
+        } else if (myImg.alt=="spring") {
+            myImg.alt="summer";
+            myImg.src="https://png.pngtree.com/element_origin_min_pic/17/08/15/3c72545ac439c95ecf2abcaf64ffd3ff.jpg";
+        } else if (myImg.alt=="summer") {
+            myImg.alt="fall";
+            myImg.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBoLKJgoYcB5Q9O0ZbN27HIflIGDiTShz1u1vfTUhLXRgkvH0N";
+        } else {
+            myImg.alt="winter";
+            myImg.src="http://images.clipartpanda.com/winter-clip-art-winterTree.jpg";
+        }
+    }
+</script>
